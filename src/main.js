@@ -1,6 +1,7 @@
 (()=>{
     const imgElem=document.querySelector('.intro');
     const mainSection=document.querySelector('.main_section')
+    const fixbtn=document.querySelector(".scroll-btn");
     const totalCount=250;
     const videoFrame=[];
     let loadCount=0;
@@ -33,6 +34,8 @@
             })
 
     }
+
+
 
 
     const intro=gsap.timeline({
@@ -82,7 +85,7 @@
             trigger: '.fix.introduce',
             pin: '.fix.introduce',
             start: 'top top',
-            end: '+=25000',
+            end: '+=20000',
             scrub: 1,
             // markers: {
             //     startColor: 'blue',
@@ -149,7 +152,8 @@ introduce.to('body',0.3,{backgroundColor:'#BBDEFB'})
 .to('.introduce .txt-7',0.3,{opacity:1,top:'4%'})
 .to('.introduce .txt-8',0.3,{opacity:1,top:'15%'})
 .to('.phone-box',0.5,{opacity:1,y:-800},'-=0.1')
-.to('.phone-box',0.5,{scale:1.1})
+.to('.phone-box',0.8,{scale:1.2})
+.to('.phone-box',0.3,{y:900})
 // .to('.introduce .txt-8',0.3,{opacity:1,y:60},'-=0.15')
 // .to('.h-box span',0.2,{left:'320%',bottom:'60%',rotate:20},'-=0.2')
 // .to('.c-box span',0.2,{left:'243%',bottom:'80%',rotate:-10},'-=0.2')
