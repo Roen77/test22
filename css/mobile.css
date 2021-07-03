@@ -1,5 +1,5 @@
 @media (max-width:1201px) {
-    .fix .inner{
+    section .inner{
         width: 100%;
         padding: 0 10px;
     }
