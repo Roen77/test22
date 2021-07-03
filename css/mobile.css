@@ -1,11 +1,29 @@
 @media (max-width:1201px) {
-    .fix{
-        width: 95vw;
-        max-width: 95vw;
+    .fix .inner{
+        width: 100%;
+        padding: 0 10px;
     }
     .fix .text-con p{
         padding: 15px;
     }
+    .introduce .word{
+        padding: 20px;
+        font-size: 14px;
+    }
+    .introduce .word.word01,
+    .introduce .word.word02{
+        right: 15%;
+    }
+    .introduce .word.word03{
+        width: 30%;
+        left:4%;
+    }
+    .introduce .main-circle,
+    .introduce .circle-container{
+        width: 550px;
+        height: 550px;
+    }
+  
 }
 @media (max-width:600px) {
     .fix .text-con{
@@ -15,23 +33,51 @@
         font-size: 15px;
     }
     .fix.introduce .person{
-        width: 200px;
+        width: 190px;
     }
     .img-con{
-       bottom:10%;
+       bottom:8%;
     }
     .introduce .bg_work{
         bottom:10%;
+    }
+    .introduce .word{
+        font-size: 13px;
+        padding: 11px;
+    }
+    .introduce .word.word03 {
+        top:49%;
+        left:1%;
+    }
+    .introduce .word.word01 {
+        right: 2%;
+        top:50%;
+    }
+    .introduce .word.word02{
+        right: 2%;
+        top:58%;
+    }
+    .introduce .main-circle,
+    .introduce .circle-container{
+        width: 330px;
+        height: 330px;
+    }
+    .fix.introduce .super{
+        bottom:10%;
+    }
+    .fix.introduce .super .person{
+        width: 250px;
     }
     
 }
 @media (max-width:360px) {
     .fix .text-con p{
+        padding: 7px;
         font-size: 4vw;
     }
-    .fix.introduce .person{
-        width: 170px;
-    }
+    /* .fix.introduce .person{
+        width: 36vw;
+    } */
     .fix .bg_con .bg{
         top:100px;       
     }
@@ -40,5 +86,63 @@
     }
     .introduce .work .person{
         width: 200px;
+    }
+    .introduce .qna .person{
+        width: 170px;
+    }
+    .introduce .word{
+        width: 18%;
+    }
+    .introduce .word.word01{
+        top:42%;
+    }
+    .introduce .main-circle,
+    .introduce .circle-container{
+       width: 70vw;
+       height: 70vw;
+    }
+    .introduce .center-circle{
+        width: 15px;
+        height: 15px;
+    } 
+    .introduce .line{
+      height: 7px;
+    }
+    .introduce .line.line1{
+      width: 7px;
+    }
+    .introduce .small-circle{
+        width: 35px;
+        height: 35px;
+    }
+    .introduce .small-circle span{
+        font-size: 13px;
+    }
+    .skill-box .level-up{
+       width: 30px;
+    }
+    .skill-box>div span{
+        font-size: 3vw;
+    }
+    .fix.introduce .super .person{
+        width: 200px;
+    }
+    .phone-box{
+        background-size: 200px;
+        width: 85%;
+        height: 400px;
+    }
+    .phone-box .project-box{
+        width: 38px;
+        height: 38px;
+        background-size:20px auto;
+    }
+    .phone-box .project-box span{
+        top:40px;
+        font-size: 11px;
+    }
+    .phone-box .project .git>img{
+        width: 50%;
+        height: 50%;
     }
 }

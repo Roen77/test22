@@ -4,7 +4,7 @@ body{
     font-family: 'Noto Sans KR', sans-serif;
     background-color:#E3F2FD;
     overflow-x: hidden;
-    width: 100vw;
+    width: 100%;
 }
 section.main_section{
     width: 100%;
@@ -61,14 +61,20 @@ section .intro{
 .fix{
     overflow: hidden;
     position: relative;
-    width: 1200px;
+    width: 100%;
     height: 100vh;
-    max-width: 1200px;
-    margin: 0 auto;
-     border: 1px solid red; 
-     box-sizing: border-box;
+    box-sizing: border-box;
+     border: 5px solid red; 
 }
-
+.fix .inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    width: 1200px;
+    margin: 0 auto;
+    border: 1px solid orange;
+    box-sizing: border-box;
+}
 /* 배경 */
 section.fix .bg_main{
     position: absolute;
@@ -91,12 +97,15 @@ section.fix .bg_con{
 }
 /* 텍스트 */
 .fix .text-con{
-    position: relative;
-    top:200px;
+    position: absolute;
+    left:0;
+    top:250px;
+    width: 100%;
     text-align: center;
     border: 1px solid blue;
     box-sizing: border-box;
     opacity: 0;
+    z-index: 200;
 }
 .fix .text-con p{
     display: inline-block;
@@ -118,20 +127,10 @@ section.fix .bg_con{
     justify-content: center;
     align-items: center;
 }
-/* section.fix p{
-    position: relative;
-    top:-150px;
-    color:#222;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    font-size: 20px;
-    border-radius: 30px;
-    background-color:#fff;
-    opacity: ;
-} */
 .fix .person{
     width: 210px;
     opacity: 0;
+    z-index: 9999;
 }
  /* introduce  */
  .introduce .main{
@@ -153,7 +152,6 @@ section.fix .bg_con{
 }
 .introduce .word{
     position: absolute;
-    left:0;
     top:0;
     border-radius:0;
     box-shadow: none;
@@ -161,53 +159,68 @@ section.fix .bg_con{
     background-repeat: no-repeat;
     background-position: center center;
     background-size:100% 100%;
-    opacity: 1;
-    /* left: 60%;
-    transform: none;
-    top:40%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size:100% 100%;
-    border-radius:0;
-    box-shadow: none;
-    padding: 23px;
-    font-size: 16px;
-    background-color:transparent;
-    opacity: 0; */
+    opacity: 0;
 }
 .introduce .word.word01{
+    top: 30%;
+    right: 24%;
     background-image: url(../img/scene01-text01.png);
 
 }
 .introduce .word.word02{
-    top:50%;
+    top: 40%;
+    right: 24%;
     background-image: url(../img/scene01-text02.png);
 }
 .introduce .word.word03{
-    left:15%;
+    left:20%;
     top:42%;
     background-image: url(../img/scene01-text03.png);
 } 
+/* circle */
+.introduce .circle-inner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .introduce .main-circle{
-    position: absolute;
+    position: relative;
     width: 700px;
     height: 700px;
     overflow: hidden;
     border-radius: 50%;
     opacity: 0;
+    z-index: 100;
 }
 .introduce .circle-container{
     position: absolute;
     width: 700px;
     height: 700px;
     border-radius: 50%;
+    background-color:rgba(0,0,0,0.4);
 }
+.introduce .center-circle{
+    position: absolute;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width:30px;
+    height: 30px;
+    background-color: #FF1744;
+    border-radius: 50%;
+    z-index: 88;
+    opacity: 0;
+} 
 .introduce .circle{
     position: absolute;
-    left:0;
-    top:0;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
     border-radius: 50%;
     border-style: solid;
+    box-sizing: border-box;
 }
 .introduce .circle.thin {
     width: 100%;
@@ -221,8 +234,6 @@ section.fix .bg_con{
     height: 93%;
     border-width: 10px;
     border-color: #fff;
-    top: 12px;
-    left: 12px;
 }
 
 .introduce .circle.yellow {
@@ -230,14 +241,12 @@ section.fix .bg_con{
     height: 93%;
     border-width: 10px;
     border-color: #FF1744 transparent;
-    top: 12px;
-    left: 12px;
 }
 .introduce .line{
     position: absolute;
-    left:50%;
-    top:50%;  
-    width: 30%;
+    left:49%;
+    top:50%;
+    width: 25%;
     height: 10px;
     border-radius: 10px;
     background-color: #FF1744;
@@ -245,15 +254,13 @@ section.fix .bg_con{
     transform-origin: left top;
     opacity: 0;
 }
-.introduce .line1{
-    height: 45%;
+.introduce .line.line1{
+    height: 43%;
     width: 10px;
     transform: rotate(45deg);
 }
 .introduce .small-circle{
     position: absolute; 
-    left:15%;
-    top:30%;
     width: 50px;
     height: 50px;
     border: 1px solid #F48FB1;
@@ -274,89 +281,76 @@ section.fix .bg_con{
     align-items: center;
     color:#fff;
 }
-.introduce .circle2{
-    left:78%;
-    top:70%
+.introduce .circle1{
+  left:10%;
+  top:30%;
 
+}
+.introduce .circle2{
+    right: 10%;
+    bottom:30%;
 }
 .introduce .slide{
     position: absolute;
+    width: 100%;
+    height: 100%;
     left:0;
     top:0;
-    width: 3000px;
-    height: 700px;
     z-index: -99;
 }
 .introduce .slide>img{
-    width: 730px;
-    height: 750px;
-    
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;  
+}
+.introduce .slide>img.spring{
+    opacity: 1;
+}
+.fix .text-con.txt-4{
+    top:5%;
 }
 /* advantage  */
 .advantage{
     overflow-x: hidden;
 }
  /* skills  */
-.skill{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.skill .txt{
-    top:0;
-}
-
-.skill .person.ability{
-    transform: scale(0.5);
-    left:44%;
-}
-.skill .level-up{
+ .skill-box .level-up{
     position: absolute;
-    width: 50px;
-    top:-55px;
-    left:25px;
-
+    left:50%;
+    transform: translateX(-50%);
+    width: 40px;
+    top:10px;
+    opacity: 0;
 }
 .skill-box{
-    position: relative;
-    width: 1200px;
-    max-width: 1200px;
-    height: 650px;
-}
-@media (max-width:1201px) {
-    .skill-box{
-        width: 100%;
-        max-width: 100%;
-    }
+    position: absolute;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    left:0;
+    top:50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 80%;
+    z-index: 00;
 }
 .skill-box>div{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    margin: 0 1%;
+}
+.skill-box>div .bar-container{
     position: absolute;
     left:0;
     bottom:0;
+    width: 100%;
     height: 0;
-    width: 27%;
-}
-.skill-box>div:nth-child(2){
-    left:30%;
-
-}
-.skill-box>div:nth-child(3){
-    left:70%;
-  
-}
-.skill-box>div:nth-child(4){
-    left:100%;
-    transform: translateX(-30%);
-   
-}
-.skill-box .bar-container{
-    position: absolute;
-    left:0;
-    bottom:0;
-    width: 30%;
-    height:100%;
-    border-radius: 25px 25px 0 0;
-    box-shadow: 5px 5px 10px rgba(98,113,255,0.78);
+    border-radius: 30px 30px 5px 5px;
+    box-shadow: 0 0 20px rgba(39,142,255,0.4);
 }
 .skill-box .html{
     background-image: linear-gradient( 109.6deg,  rgba(39,142,255,1) 11.2%, rgba(98,113,255,0.78) 100.2% );
@@ -375,7 +369,8 @@ section.fix .bg_con{
     left:0;
     bottom:0;
     width: 100%;
-    background-image: linear-gradient( 110.3deg,  rgba(73,93,109,1) 4.3%, rgba(49,55,82,1) 96.7% );
+    background-color:#263238;
+    border-radius: 30px;
     text-align: center;
     color:#fff;
     font-weight: bold;
@@ -384,16 +379,10 @@ section.fix .bg_con{
     opacity: 0;
     z-index: 100;
 }
-.skill-box .level-up{
-    opacity: 0;
-}
 section.fix .person.super{
     left:55%;
     transform: translateX(-50%);
     width: 40%;
-}
-.skill .txt-8{
-    top:100%;
 }
 .skill .title{
     opacity: 1;
@@ -404,56 +393,92 @@ section.fix .person.super{
     
 
 }
-.skill .bg.phone-box{
-    background-image: url(../img//phone.svg);
-    background-repeat: no-repeat;
-    background-size: 350px;
+.phone-box{
+    position: absolute;
     left:50%;
-    top:100%;
+    bottom:-800px;
     transform: translateX(-50%);
     opacity: 1;
     z-index: 9999;
     width: 350px;
-    height: 680px;
+    height: 500px;
     opacity: 0;
-;
 }
 
-.skill .phone-box .project{
+.phone-box .projects{
     display: flex;
     height: 100%;
     justify-content: center;
     align-items: center;
 }
-
-.skill .phone-box .project-box{
+.phone-box .projects .phone{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+}
+.phone-box .project{
     position: relative;
-    width: 60px;
-    height: 60px;
+    margin: 0 2%;
+}
+.phone-box .project-box{
+    display: block;
+    width: 50px;
+    height: 50px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 40px auto;
     text-align: center;
-    margin: 2%;
     border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+    border: 1px solid #fff;
 }
-.skill .phone-box .project-box span{
+.phone-box .project .git>img{
+    position: absolute;
+    left:-25%;
+    top:-20px;
+    width: 30px;
+    height: 30px;
+}
+.phone-box .project .git::after{
+    content: 'github';
+    position: absolute;
+    top:-50px;
+    left:50%;
+    transform: translateX(-100%);
+    text-align: center;
+    background-color: #FF7043;
+    font-size: 11px;
+    width: 100%;
+    color:#fff;
+    padding: 3px;
+    border-radius: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s;
+
+}
+.phone-box .project .git:hover::after{
+    opacity: 1;
+    visibility: visible;
+}
+.phone-box .project-box span{
     display: inline-block;
     position: relative;
     color:#222;
     top:60px;
     font-size: 13px;
 }
-.skill .phone-box .book{
+.phone-box .book{
     background-color: #64B5F6;
     background-image: url(../img/book.png);
 }
-.skill .phone-box .memo{
+.phone-box .memo{
     background-color: #F06292;
     background-image: url(../img/meno.png);
 }
-.skill .phone-box .cover{
+.phone-box .cover{
     background-color: #EF5350;
     background-image: url(../img/cover.png);
 }
@@ -466,85 +491,11 @@ section.fix .person.super{
     height: 600px;
     background-color: red;
     opacity: 0;
+    visibility: hidden;
 }
 .project-box.book:hover+.project-content{
     opacity: 1;
 } 
-/* 신2 */
-/* section.introduce .secene2 .txt{
-    left:10%;
+.introduce .super .person{
+    width: 350px;
 }
-section.introduce .secene2 .slide{
-    display: flex;
-
-}
-section.introduce .secene2 .slide img{
-    width: 400px;
-    height: 400px;
-}
-section.introduce .secene2 .txt-1,
-section.introduce .secene2 .txt-2{
-    top:35%;
-}
-section.introduce .secene2 .bg{
-    top:2%;
-    height: 90%;
-    opacity: 0;
-}
-section.introduce .secene2 .line{
-    position: absolute;
-    left:15%;
-    top:20%;
-    height:0;
-    background-color:#2596be;
-    width: 3px;
-    z-index: 9999;
-}
-section.introduce .secene2 .line>span{
-    position: absolute;
-    left:50%;
-    transform: translateX(-50%);
-    top:-100px;
-    width: 100px;
-    border-radius: 10px;
-    background: #13a1d4;
-    z-index: 500;
-    padding: 5px;
-    opacity: 1;
-    color:#fff;
-    text-align: center;
-    font-size: 16px;
-    opacity: 0;
-}
-section.introduce .secene2 .slides{
-    position: relative;
-    top:-15%;
-    border: 10px solid #74cbeb;
-    width: 400px;
-    height: 300px;
-    overflow: hidden;
-    border-radius: 25px;
-    opacity: 0;
-    transform: scale(0.5);
-}
-section.introduce .secene2 .slides::after{
-    content: '';
-    position: absolute;
-    left:0;
-    top:50%;
-    width: 100%;
-    height: 5px;
-    background-color:#74cbeb;
-
-}
-section.introduce .secene2 .slides::before{
-    content: '';
-    position: absolute;
-    left:50%;
-    top:0%;
-    width: 5px;
-    height: 300px;
-    background-color:#74cbeb;
-    z-index: 100;
-}
-
