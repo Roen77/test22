@@ -2,6 +2,7 @@
     section .inner{
         width: 100%;
         padding: 0 10px;
+        box-sizing: border-box;
     }
     .fix .text-con p{
         padding: 15px;
