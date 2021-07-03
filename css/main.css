@@ -2,17 +2,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
 body{
     font-family: 'Noto Sans KR', sans-serif;
-    overflow-x: hidden !important;
-    width: 100vw;
+    background-color:#E3F2FD;
+    overflow-x: hidden;
+    width: 100%;
 }
 section.main_section{
-    position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* border: 30px solid gold; */
+    box-sizing: border-box;
+}
+section.main_section::after{
+    content: '';
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0,0,0,0.6);
 }
 section .intro{
     position: absolute;
@@ -22,18 +33,20 @@ section .intro{
     height: 100%;
 }
 .main_txt{
-    position: absolute;
-    text-align: center;
-    width: 100%;
     color:#ddd;
     font-size: 10vw;
     z-index: 9999;
 }
 .txt_area{
-    background: linear-gradient(to bottom ,#222 0,#fff 60%);
+    /* background: linear-gradient(to bottom ,#222 0,#fff 60%); */
+    background-color:#222;
     position: relative;
     box-sizing: border-box;
-    padding: 200px;
+    height: 100vh;
+    border-bottom: 1px solid blue;
+}
+.txt_area h2{
+    color:#fff;
 }
 .main_section::before{
     content: '';
@@ -46,20 +59,18 @@ section .intro{
     z-index: 9999;
 }
 .fix{
+    overflow: hidden;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 100px;
-    width: 100vw;
-    box-sizing: border-box;
-    max-width: 1200px;
+    width: 1200px;
     height: 100vh;
+    max-width: 1200px;
     margin: 0 auto;
-    /* border: 1px solid red; */
-
+     border: 1px solid red; 
+     box-sizing: border-box;
 }
-section.fix .bg{
+
+/* 배경 */
+section.fix .bg_main{
     position: absolute;
     left:0;
     top:0;
@@ -68,34 +79,90 @@ section.fix .bg{
     opacity: 0;
 }
 section.fix .bg.main{
-    transform: scale(0.5);
+    transform: scale(0.2);
 }
-section.fix p{
+section.fix .bg_con{
+    background-color: blue;
     position: absolute;
-    left:50%;
-    transform: translateX(-50%);
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+}
+/* 텍스트 */
+.fix .text-con{
+    position: relative;
+    top:200px;
+    text-align: center;
+    border: 1px solid blue;
+    box-sizing: border-box;
+    opacity: 0;
+}
+.fix .text-con p{
+    display: inline-block;
+    color:#222;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 20px;
+    border-radius: 30px;
+    background-color:#fff;
+}
+/* 사람 */
+.img-con{
+    position: absolute;
+    left:0;
+    bottom:130px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* section.fix p{
+    position: relative;
+    top:-150px;
     color:#222;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
     padding: 20px;
     font-size: 20px;
     border-radius: 30px;
     background-color:#fff;
+    opacity: ;
+} */
+.fix .person{
+    width: 210px;
     opacity: 0;
 }
-section.fix .person{
+ /* introduce  */
+ .introduce .main{
+    transform: translateY(10%);
+ }
+ .introduce .bg_work{
     position: absolute;
-    width: 20%;
+    left:50%;
+    transform: translateX(-50%);
+    bottom:100px;
+    height: 750px;
     opacity: 0;
-    z-index: 9999;
 }
-/* introduce */
-.introduce .person.work,
-.introduce .person.qna{
-    bottom:9%;
+.introduce .person{
+    width: 270px;
 }
-
+.introduce .qna .person{
+    width: 250px;
+}
 .introduce .word{
-    left: 60%;
+    position: absolute;
+    left:0;
+    top:0;
+    border-radius:0;
+    box-shadow: none;
+    padding: 23px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:100% 100%;
+    opacity: 1;
+    /* left: 60%;
     transform: none;
     top:40%;
     background-repeat: no-repeat;
@@ -106,7 +173,7 @@ section.fix .person{
     padding: 23px;
     font-size: 16px;
     background-color:transparent;
-    opacity: 0;
+    opacity: 0; */
 }
 .introduce .word.word01{
     background-image: url(../img/scene01-text01.png);
@@ -225,11 +292,11 @@ section.fix .person{
     height: 750px;
     
 }
-/* advantage */
+/* advantage  */
 .advantage{
     overflow-x: hidden;
 }
-/* skills */
+ /* skills  */
 .skill{
     display: flex;
     justify-content: center;
@@ -402,7 +469,7 @@ section.fix .person.super{
 }
 .project-box.book:hover+.project-content{
     opacity: 1;
-}
+} 
 /* 신2 */
 /* section.introduce .secene2 .txt{
     left:10%;
@@ -480,4 +547,4 @@ section.introduce .secene2 .slides::before{
     background-color:#74cbeb;
     z-index: 100;
 }
- */
+

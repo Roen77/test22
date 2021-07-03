@@ -1,0 +1,44 @@
+@media (max-width:1201px) {
+    .fix{
+        width: 95%;
+        max-width: 95%;
+    }
+    .fix .text-con p{
+        padding: 15px;
+    }
+}
+@media (max-width:600px) {
+    .fix .text-con{
+        top:17%;
+    }
+    .fix .text-con p{
+        font-size: 15px;
+    }
+    .fix.introduce .person{
+        width: 200px;
+    }
+    .img-con{
+       bottom:10%;
+    }
+    .introduce .bg_work{
+        bottom:10%;
+    }
+    
+}
+@media (max-width:360px) {
+    .fix .text-con p{
+        font-size: 4vw;
+    }
+    .fix.introduce .person{
+        width: 170px;
+    }
+    .fix .bg_con .bg{
+        top:100px;       
+    }
+    .introduce .bg_work{
+        height: 500px;
+    }
+    .introduce .work .person{
+        width: 200px;
+    }
+}
