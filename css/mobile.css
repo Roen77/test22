@@ -1,7 +1,7 @@
 @media (max-width:1201px) {
     .fix{
-        width: 95%;
-        max-width: 95%;
+        width: 95vw;
+        max-width: 95vw;
     }
     .fix .text-con p{
         padding: 15px;
