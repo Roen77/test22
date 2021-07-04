@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 287.33 37.75">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1a1a1a;
+      }
+
+      .cls-2 {
+        fill: #ffa800;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>자산 2</title>
+  <g id="레이어_2" data-name="레이어 2">
+    <g id="Layer_1" data-name="Layer 1">
+      <g>
+        <rect class="cls-1" width="287.33" height="37.75"/>
+        <rect class="cls-2" y="3.12" width="287.33" height="0.91"/>
+        <rect class="cls-2" y="33.21" width="287.33" height="0.91"/>
+        <g>
+          <rect class="cls-3" y="18.42" width="6.42" height="0.91"/>
+          <path class="cls-3" d="M267.84,19.33H254.77v-.91h13.07Zm-26.15,0H228.62v-.91h13.07Zm-26.14,0H202.48v-.91h13.07Zm-26.14,0H176.34v-.91h13.07Zm-26.14,0H150.2v-.91h13.07Zm-26.14,0H124.06v-.91h13.07Zm-26.14,0H97.92v-.91H111Zm-26.14,0H71.78v-.91H84.85Zm-26.14,0H45.64v-.91H58.71Zm-26.14,0H19.5v-.91H32.57Z"/>
+          <rect class="cls-3" x="280.91" y="18.42" width="6.42" height="0.91"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

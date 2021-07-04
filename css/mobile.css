@@ -64,6 +64,19 @@
         width: 330px;
         height: 330px;
     }
+    .advantage{
+        margin-bottom: 11px;
+        display: block;
+    }
+    .advantage .number{
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    .advantage p{
+        padding: 7px;
+        font-size: 14px;
+    }
     .fix.introduce .super{
         bottom:10%;
     }
