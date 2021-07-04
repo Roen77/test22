@@ -9,6 +9,14 @@
     <title>포트폴리오</title>
 </head>
 <body>
+    <div class="loading">
+        <div class="circle-container">
+            <div class="circle thin"></div>
+            <div class="circle thick"></div>
+            <div class="circle yellow"></div>
+        </div>
+        <p>loading...</p>
+    </div>
     <section class="main_section">
         <h2 class="main_txt">portfolio</h2>
         <img  class="intro" src="video/img_0.jpg" alt="1">
@@ -17,7 +25,6 @@
         <h2>저는...</h2>
     </div> 
     <section class="fix introduce">
-        <div class="scroll-btn">스크롤</div>
         <!-- info -->
         <img class="bg_main" src="img/scene01.jpg" alt="회사">
         <div class="inner">
@@ -61,10 +68,10 @@
                         <div class="circle yellow"></div>
                     </div>
                     <div class="slide">
-                        <img class="spring" src="img/scene02-spring.jpg" alt="봄">
-                        <img class="summer" src="img/scene02-summer.jpg" alt="여름">
-                        <img class="fall" src="img/scene02-fall.jpg" alt="가을">
-                        <img class="winter" src="img/scene02-winter.jpg" alt="겨울">
+                        <img class="spring" src="img/spring.jpg" alt="봄">
+                        <img class="summer" src="img/summer.jpg" alt="여름">
+                        <img class="fall" src="img/fall.jpg" alt="가을">
+                        <img class="winter" src="img/winter.jpg" alt="겨울">
                     </div>
                 </div>
                 <div class="small-circle circle1"><span>회사</span></div>
@@ -140,23 +147,56 @@
         <div class="inner">
             <div class="title"><h3>나의 프로젝트</h3></div>
             <div class="projects">
-                <div class="project">
+                <div class="project book-con">
                     <a href="#" class="git"><img src="img/github.png" alt="github"></a>
                     <a class="project-box book" href="#">
                         <span>책정리웹</span>
                     </a>
+                    <div class="content">
+                        <div class="title">
+                            <p>프로젝트 소개</p>
+                            <p><span>제목</span>: 책 정리 웹사이트</p>
+                            <p><span>vue</span><span>nuxt</span></p>
+                          </div>
+                          <p>내가 기록하고 싶은 책을 검색하거나, 직접 작성하여 관리할 수 있습니다.
+                            다른 사용자의 책들을 검색하여 찾거나,내가 관심있는 책들을 북마크하거나, 좋아요를 클릭하여 기록할 수 있습니다.
+                            책의 내용에 대해서 댓글을 작성하여 공유할 수 있습니다.</p>
+                    </div>
                 </div>
-                <div class="project">
+                <div class="project memo-con">
                     <a href="#" class="git"><img src="img/github.png" alt="github"></a>
                     <a class="project-box memo" href="#">
                         <span>메모웹</span>
                     </a>
+                    <div class="content">
+                        <div class="title">
+                            <p>프로젝트 소개</p>
+                            <p><span>제목</span>: 메모 웹사이트</p>
+                            <p><span>vue</span><span>nuxt</span></p>
+                          </div>
+                          <p>내가 기록하고 싶은 내용을 기록할 수 있습니다.
+                            원하는 카테고리를 설정하여 메모를 기록할 수  있고, 메모의 내용이 진행중인지 완료중인지 변경하여, 메모를 관리할 수 있습니다.
+                            해당 완료상태에 따라 카드를 검색하여 찾을 수 있고,원하는 카테고리를 추가,삭제하여 자유롭게 메모를 기록할 수 있습니다.
+                            </p>
+                    </div>
                 </div>
-                <div class="project">
+                <div class="project cover-con">
                     <a href="#" class="git"><img src="img/github.png" alt="github"></a>
                     <a class="project-box cover" href="#">
                         <span>커버웹</span>
                     </a>
+                    <div class="content">
+                        <div class="title">
+                            <p>프로젝트 소개</p>
+                            <p><span>제목</span>: 메모 웹사이트</p>
+                            <p><span>vue</span><span>nuxt</span></p>
+                          </div>
+                          <p>내가 기록하고 싶은 내용을 기록할 수 있습니다.
+                            원하는 카테고리를 설정하여 메모를 기록할 수  있고, 메모의 내용이 진행중인지 완료중인지 변경하여, 메모를 관리할 수 있습니다.
+                            해당 완료상태에 따라 카드를 검색하여 찾을 수 있고,원하는 카테고리를 추가,삭제하여 자유롭게 메모를 기록할 수 있습니다.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

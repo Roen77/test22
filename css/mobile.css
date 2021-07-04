@@ -29,6 +29,7 @@
 @media (max-width:600px) {
     .fix .text-con{
         top:17%;
+        padding: 0 5px;
     }
     .fix .text-con p{
         font-size: 15px;

@@ -6,6 +6,7 @@ body{
     overflow-x: hidden;
     width: 100%;
 }
+/* 버튼 */
 .scroll-btn{
     position: fixed;
     width: 30px;
@@ -14,6 +15,62 @@ body{
     bottom:50px;
     right: 100px;
     z-index: 9999;
+}
+body .main_section{
+    opacity: 0;
+}
+body.after-load .main_section{
+    opacity: 1;
+}
+/* 로딩 */
+body .loading{
+    position: fixed;
+    left:0;
+    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    opacity: 1;
+    visibility: visible;
+    overflow: hidden;
+    z-index: 99999;
+}
+body .loading p{
+    position: absolute;
+    top:55%;
+    transform: translateY(-50%);
+}
+body .loading .circle-container{
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    animation: loading 1s infinite linear;
+} 
+body .loading .circle.thin{
+    border: none;
+}
+body .loading .circle.thick{
+    border-color:transparent #00BCD4;
+}
+body .loading .circle.yellow{
+    border-color:#2196F3 transparent;
+}
+body .loading .circle.thick,
+body .loading .circle.yellow{
+    border-width:5px;
+    width: 100%;
+    height: 100%;
+}
+@keyframes loading {
+    100%{transform: rotate(360deg);}
+}
+
+body.after-load .loading{
+    opacity: 0;
+    visibility: hidden;
 }
 section.main_section{
     width: 100%;
@@ -203,26 +260,26 @@ section.fix .bg_con{
     opacity: 0;
     z-index: 100;
 }
-.introduce .circle-container{
+.circle-container{
     position: absolute;
     width: 700px;
     height: 700px;
     border-radius: 50%;
     background-color:rgba(0,0,0,0.4);
 }
-.introduce .center-circle{
+.center-circle{
     position: absolute;
     left:50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    width:30px;
-    height: 30px;
+    width:32px;
+    height: 32px;
     background-color: #FF1744;
     border-radius: 50%;
     z-index: 88;
     opacity: 0;
 } 
-.introduce .circle{
+.circle{
     position: absolute;
     left:50%;
     top:50%;
@@ -231,21 +288,21 @@ section.fix .bg_con{
     border-style: solid;
     box-sizing: border-box;
 }
-.introduce .circle.thin {
+ .circle.thin {
     width: 100%;
     height: 100%;
     border-width: 1px;
     border-color: #494949;
 }
 
-.introduce .circle.thick {
+ .circle.thick {
     width: 93%;
     height: 93%;
     border-width: 10px;
     border-color: #fff;
 }
 
-.introduce .circle.yellow {
+ .circle.yellow {
     width: 93%;
     height: 93%;
     border-width: 10px;
@@ -253,7 +310,7 @@ section.fix .bg_con{
 }
 .introduce .line{
     position: absolute;
-    left:49%;
+    left:50%;
     top:50%;
     width: 25%;
     height: 10px;
@@ -426,7 +483,7 @@ section.fix .person.super{
     width: 100%;
     height: 100%;
 }
-.projects .title{
+.phone-box  .title{
     padding-top: 70px;
     position: absolute;
     width: 100%;
@@ -505,6 +562,25 @@ section.fix .person.super{
 .txt_area.project-area{
     background-color: #fff;
 }
-.project-area .projects{
-    display: flex;
+.project-area .title{
+    font-size: 30px;
+}
+.project-area  .inner{
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.project-area  .project{
+    margin: 2% 0;
+}
+.project-area  .project .git>img{
+    left:-10px;
+}
+.project-area  .project .content{
+    margin: 20px 0;
+    padding: 20px 0;
+}
+.projects .project .git::after{
+    left:0;
+    transform: translateX(-50%);
+    width: 50px;
 }
